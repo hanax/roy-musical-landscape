@@ -1,0 +1,46 @@
+<head>
+<title> Roy: Musical Landscape </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/pitch2color.js"></script>
+<script type="text/javascript" src="js/p5.js"></script>
+<script type="text/javascript" src="js/p5.sound.js"></script>
+<script type="text/javascript" src="js/pitchdetect.js"></script>
+<script type="text/javascript" src="js/player_screen.js"></script>
+<script src="https://use.fontawesome.com/9d6ff586b5.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style/player_screen.css" />
+</head>
+
+<body>
+
+<div id="detector">
+  <div class="pitch"><span id="pitch">--</span>Hz</div>
+  <div class="note"><span id="note">--</span></div>   
+  <div id="detune">
+    <span id="detune_amt">--</span>
+    <span id="flat">cents &#9837;</span>
+    <span id="sharp">cents &#9839;</span>
+  </div>
+</div>
+
+<div class="hint" id="hint"> </div>
+
+<div class="top-navi">
+  <i class="fa fa-arrow-right" aria-hidden="true" id="next"></i>
+</div>
+
+<div class="button dice" id="dice">
+</div>
+
+<div class="button" id="mic">
+  <i class="fa fa-microphone" aria-hidden="true"></i>
+</div>
+
+<div class="marker" id="marker">
+  <i class="fa fa-caret-right" aria-hidden="true"></i>
+</div>
+</body>
+</html>

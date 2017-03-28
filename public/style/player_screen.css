@@ -1,0 +1,133 @@
+body {
+  background: url('../assets/player_bg.png') #000 left 20px no-repeat;
+  background-size: 100% 5px;
+  font-family: 'Open Sans', sans-serif;
+  color: #FFF;
+  margin: 0;
+  overflow: hidden;
+  font-size: 12px;
+  transition: all .3s;
+}
+
+canvas {
+  display: none;
+}
+
+#flat, #sharp {
+  display: none;
+}
+
+.sharp #sharp, .flat #flat {
+  display: inline;
+}
+
+.confident {
+  background: #555;
+}
+
+.vague {
+  background: #333;
+}
+
+#detector {
+  height: 20px;
+  transition: all .3s;
+}
+
+#detector div {
+  display: inline-block;
+  width: 30%;
+}
+
+.hint {
+  float: left;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 20px;
+  transition: transform .3s;
+}
+
+.top-navi {
+  float: left;
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  font-size: 100px;
+  transition: transform .3s;
+}
+
+.marker {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-size: 20px;
+  transition: all .3s;
+}
+
+.button {
+  float: left;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  font-size: 200px;
+  transition: transform .3s;
+}
+
+.button-pulsate {
+  animation: pulsate 1.5s linear infinite, enlarge 8s linear forwards;
+}
+
+.button-wiggle {
+  animation: wiggle .8s linear infinite;
+}
+
+.bgcolor-animated {
+  animation: rolling 2s linear infinite;
+}
+
+@keyframes pulsate {
+  0%, 100%  {color: rgba(255, 255, 255, 1);}
+  50%  {color: rgba(255, 255, 255, .5);}
+}
+
+@keyframes enlarge {
+  0%  {font-size: 200px;}
+  100%  {font-size: 300px;}
+}
+
+@keyframes wiggle {
+  0%, 50%, 100%  {transform: rotate(0)}
+  25%  {transform: rotate(10deg)}
+  75%  {transform: rotate(-10deg)}
+}
+
+@keyframes rolling {
+  0%  {background-color: #CCFF00}
+  16%  {background-color: #00FF00}
+  33%  {background-color: #00FFFF}
+  50%  {background-color: #0000FF}
+  66%  {background-color: #FF00FF}
+  83%  {background-color: #FF0000}
+}
+
+.dice {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 166px;
+  height: 198px;
+  background: url('../assets/tutorial_5.png') no-repeat;
+  background-position: left top;
+  background-size: auto 100%;
+}
+
+.dice-roll {
+  animation: roll 2s steps(10) infinite, pulsate 1s linear infinite;
+}
+
+@keyframes roll {
+  100%  {background-position: -2520px top;}
+}

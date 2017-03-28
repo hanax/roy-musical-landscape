@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Poiret';
+  src: url('poiret.ttf');
+}
+
+body {
+  background-color: #000;
+  font-family: 'Poiret', 'Open Sans', sans-serif;
+  color: #FFF;
+  margin: 0;
+  overflow: hidden;
+  font-size: 12px;
+  transition: all .3s;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.row {
+  float: left;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+}
+
+.top-logo {
+  padding: 60px 0;
+}
+
+.top-logo img {
+  width: 30%;
+  height: auto;
+}
+
+.button {
+  font-size: 30px;
+  display: inline-block;
+  height: 60px;
+  cursor: pointer;
+  line-height: 60px;
+  text-align: center;
+  padding: 10px 10px 10px 50px;
+  background: url('../assets/btn.png') 10px center no-repeat;
+  background-size: 30px 30px;
+  transition: all .3s;
+}
+
+.button:hover {
+  background-size: 100% 30px;
+}
+
+.help {
+  position: absolute;
+  text-align: center;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  cursor: pointer;
+  line-height: 150px;
+  font-size: 30px;
+}
+
+@media (max-width: 600px) {
+  .top-logo img {
+    width: 80%;
+    height: auto;
+  }
+
+  .button {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .help {
+    bottom: 0;
+  }
+}
+

@@ -1,0 +1,198 @@
+@font-face {
+  font-family: 'Poiret';
+  src: url('poiret.ttf');
+}
+
+body {
+  background-color: #000;
+  font-family: 'Poiret', 'Open Sans', sans-serif;
+  color: #FFF;
+  margin: 0;
+  font-size: 12px;
+  transition: all .3s;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  width: 50%;
+  margin-left: 25%;
+  text-align: left;
+}
+
+#flat, #sharp {
+  display: none;
+}
+
+.sharp #sharp, .flat #flat {
+  display: inline;
+}
+
+.confident {
+  background: #555;
+}
+
+.vague {
+  background: #333;
+}
+
+#detector {
+  height: 20px;
+  transition: all .3s;
+}
+
+#detector div {
+  display: inline-block;
+  width: 30%;
+}
+
+.page {
+  height: 100vh;
+  width: 100%;
+}
+
+.page-last {
+  height: 50vh;
+  width: 100%;
+}
+
+.row {
+  float: left;
+  padding: 0 10px;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.row img {
+  max-width: 80%;
+  height: auto;
+  margin: 15px;
+}
+
+.column {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+.column img {
+  width: 50%;
+  height: auto;
+}
+
+.row-small {
+  height: 10%;
+}
+
+.row-large {
+  height: 40%;
+}
+
+.top-logo {
+  margin: 60px 0;
+}
+
+.top-logo img {
+  width: 30%;
+  height: auto;
+}
+
+.button {
+  font-size: 30px;
+  display: inline-block;
+  height: 60px;
+  cursor: pointer;
+  line-height: 40px;
+  text-align: center;
+  padding: 10px 10px 10px 50px;
+  background: url('../assets/btn.png') 10px center no-repeat;
+  background-size: 30px 30px;
+  transition: all .3s;
+}
+
+.button--black {
+  background: url('../assets/btn-black.png') 10px center no-repeat;
+  background-size: 30px 30px;
+}
+
+.button:hover {
+  background-size: 90% 30px;
+}
+
+.button-mic {
+  height: 100%;
+  cursor: pointer;
+  line-height: 100%;
+  text-align: center;
+  font-size: 80px;
+}
+
+.button-default {
+  animation: pulsate 1s linear infinite;
+}
+
+.button-mic i {
+  position: relative;
+  top: 100px;
+}
+
+.dice {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 166px;
+  height: 198px;
+  background: url('../assets/tutorial_5.png') no-repeat;
+  background-position: left top;
+  background-size: auto 100%;
+}
+
+.dice-blue {
+  background-position: -1260px top;
+}
+
+.dice-roll {
+  animation: roll 2s steps(10) infinite, pulsate 1s linear infinite;
+}
+
+@keyframes roll {
+  100%  {background-position: -2520px top;}
+}
+
+.button-pulsate {
+  animation: pulsate 1.5s linear infinite, enlarge 8s linear forwards;
+}
+
+@keyframes enlarge {
+  0%  {font-size: 80px;}
+  100%  {font-size: 120px;}
+}
+
+@keyframes pulsate {
+  0%, 100%  {opacity: 1;}
+  50%  {opacity: 0.3;}
+}
+
+@media (max-width: 600px) {
+  .top-logo img {
+    width: 80%;
+    height: auto;
+  }
+  ul {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
